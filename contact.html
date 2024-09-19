@@ -172,6 +172,49 @@
         });
     }
 </script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+  // Get form values
+  const username = document.getElementById('name-field').value.trim();
+  const email = document.getElementById('email-field').value.trim();
+  const subject = document.getElementById('subject-field').value.trim();
+  const message = document.getElementById('message-field').value.trim();
+
+  // Validation checks
+  if (username === '') {
+      alert('Username is required.');
+      event.preventDefault(); // Prevent form submission
+      return;
+  }
+  
+  if (email === '') {
+      alert('Email is required.');
+      event.preventDefault(); // Prevent form submission
+      return;
+  }
+  
+  if (subject === '') {
+      alert('subject is required.');
+      event.preventDefault(); // Prevent form submission
+      return;
+  }
+
+
+  if (message === '') {
+      alert('message is required.');
+      event.preventDefault(); // Prevent form submission
+      return;
+  }
+
+
+  function submitted()
+  {
+    alert("submitted successfully")
+  }
+  // If all checks pass, the form will be submitted
+});
+
+</script>
 
 
 </body>
